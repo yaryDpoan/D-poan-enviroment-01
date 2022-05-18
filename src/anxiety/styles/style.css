@@ -291,7 +291,7 @@ form .question h2 {
 
 @media screen and (max-width: 600px){
     header .headerMain{
-        gap: 28px;
+        gap: 30px;
         background-position-x: 0;
         background-size: 220% 100%;
         background-clip: content-box;
@@ -309,10 +309,10 @@ form .question h2 {
         font-size: 35px;
     }
     header .headerMain p{
-        font-size: 14px;
+        font-size: 18px;
     }
     header .headerMain h3{
-        font-size: 17px;
+        font-size: 22px;
     }
     form h1{
         font-size: 30px;
