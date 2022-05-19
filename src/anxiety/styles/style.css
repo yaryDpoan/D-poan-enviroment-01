@@ -30,7 +30,7 @@ body{
     --gray: #343434;
 }
 header{
-   
+    overflow-y: auto;
     width: 100vw;
     height: 100vh;
     
@@ -55,6 +55,7 @@ header h1 span{
     color: rgba(255, 255, 255, 0.89)
 }
 header .headerMain{
+    
     gap: 30px;
     display: flex;
     flex-direction: column;
