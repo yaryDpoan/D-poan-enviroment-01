@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Radio+Canada:wght@600;700&family=Rajdhani:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;600;700&family=Radio+Canada:wght@600;700&family=Rajdhani:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
 @font-face {
     font-family: 'Stencil';
     src: url("../fonts/StencilStd.otf");
@@ -27,9 +28,9 @@ body{
     --blue4: #4528fc;
     --purpple: #7a27f2;
     --gray: #343434;
-    --fontColorDefault: rgb(20, 20, 20);
-    --title: #004AAD;
-    --subTitle: #38B6FF
+    --fontColorDefault: #fff;
+    --title: #fff;
+    --subTitle: #fff
 }
 header{
    display: flex;
@@ -40,16 +41,18 @@ header{
     color: var(--fontColorDefault)
 }
 header .headerH1  {
-    padding: 0 10px;
-    margin-top: 15px;
+
+    background-color: var(--gray);
+    min-height: 120px;
     display: flex;
-    text-align: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     
 }
 
 header .headerH1 h1{
+    margin-left: 30px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -60,7 +63,7 @@ header .headerH1 h1{
     font-size: 50px ;
 }
 header  .headerH1  span:nth-last-of-type(1){
-    color: #2B2B2B;
+    color: var(--fontColorDefault);
     letter-spacing: 8px;
     position: relative;
     top: -3px;
@@ -77,13 +80,11 @@ header .headerMain{
     flex-direction: column;
     align-items: center;
     background-size: cover;
-    /*https://storage.builderall.com//franquias/2/455925/editor-html/9844335.png
     background-image: url('https://storage.builderall.com//franquias/2/455925/editor-html/4319632.png');
-    background: var(--backgroundDefault);}
-    */}
+    }
 
 header .headerMain h2{
-    color: gray;
+    color: var(--fontColorDefault);
     text-align: left;
     font-size: 37px;
     margin-top: 30px;
@@ -95,9 +96,14 @@ header .headerMain h2 span{
     font-family: 'Lato',"Arial";
 }
 header .headerMain p{
-    
-    font-family: 'Mulish',Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    opacity: 1;
+
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    font-size: 23px;
+}
+header .headerMain p b{
+    font-size: 21px;
+    font-family: 'Inter', 'Arial';
 }
 header .headerMain p,header .headerMain p.adivise{
     padding: 0 20px;
@@ -108,24 +114,32 @@ header .headerMain p.adivise{
     
 }
 header button{
-
+     margin-top: 10px;
     font: 400 17px 'Poppins',Arial, Helvetica, sans-serif;
     border-radius: 30px;
     margin-bottom: 20px;
+    background-color: transparent;
 }
 header button a {
+    background-color: var(--gray);
+    font-family: "Poppins", "arial";
     border-radius: 30px;
+    font-size: 20px;
     padding: 20px;
-    background-color: #004AAd;
     display: block;
     text-underline-offset: none;
     text-decoration: none;
     color: #fff;
     width: 100%;
     height: 100%;
+    transition-timing-function: ease-out;
 
-    
-   
+}
+
+header button a:hover{
+    background-color: rgb(53, 53, 53);
+    transition-duration: .1s;
+    padding: 21px;
 }
 form{
     font-family: 'Poppins', "Arial","serif";
@@ -134,6 +148,7 @@ form{
     overflow-x: hidden;
     display: flex;
     background-size: cover;
+    background-image: url('../assets/fundo-azul.png');
     
 }
 form::-webkit-scrollbar{
@@ -144,7 +159,6 @@ form .question, form .result{
     gap: 20px;
     flex: none;
     width: 100vw;
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,7 +219,7 @@ form .question h2 {
     color: var(--fontColorDefault)
 }
 .question div span:hover{
-     opacity: .7;
+     opacity: .8;
 }
 
 .buttons .button{
@@ -284,7 +298,15 @@ form .question h2 {
 }
 @media screen and (max-width: 800px){
     header h1{
+   
         text-align: center;
+    }
+    header .headerH1{
+        
+        align-items: center;
+    }
+    header .headerH1 h1{
+        margin-left: 0px;
     }
     header h2{
       
@@ -309,16 +331,24 @@ form .question h2 {
     }
     header .headerMain{
         gap: 50px;
-        margin-top: 5px;
+
 
     }
     
     header h1 {
-       
+    
         padding: 15px 0px 10px 0px;
     }
     header h1 span {
         margin-top: 15px;
+    }
+    header button {
+        margin-top: 0px;
+    }
+    header button a{
+        
+        font-size: 18px;
+        padding: 17px;
     }
     header .headerMain h2{
         font-size: 20px;
@@ -329,10 +359,10 @@ form .question h2 {
         font-size: 35px;
     }
     header .headerMain p{
-        font-size: 16px;
+        font-size: 17px;
     }
-    header .headerMain p.adivise{
-        font-size: 18px;
+    header .headerMain p b {
+        font-size: 17px;
     }
     form h1{
         font-size: 30px;
@@ -364,6 +394,7 @@ form .question h2 {
     .question div span{
         font-size: 20px;
     }
+   
     .question div input{
         width: 40px;
         height: 40px;
